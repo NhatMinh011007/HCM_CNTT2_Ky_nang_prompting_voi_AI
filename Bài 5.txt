@@ -1,0 +1,27 @@
+Phần 1: Phân tích vi phạm AI Policy và Đạo đức nghề nghiệp
+1. Vi phạm nguyên tắc trách nhiệm giải trình và lạm quyền tự động hóa (Accountability & Automation Bias)
+Trưởng phòng đã sử dụng AI như một chủ thể ra quyết định cuối cùng thay vì công cụ hỗ trợ (Decision Support). AI không có năng lực hành vi dân sự hay thẩm quyền pháp lý để chấm dứt hợp đồng lao động. Việc Trưởng phòng nhắm mắt ký duyệt và đổ lỗi cho "sự khách quan của máy móc" là hành vi thoái thác trách nhiệm quản lý, vi phạm nghiêm trọng đạo đức nghề nghiệp của người làm nhân sự.
+
+2. Bỏ qua bối cảnh thực tế và rủi ro định kiến (Contextual Blindness & Bias)
+Dữ liệu thô (chỉ gồm KPI và lịch sử chấm công) không thể phản ánh toàn diện bức tranh của một con người. Thuật toán không biết được một nhân viên bị giảm hiệu suất do tai nạn, thai sản, hay đang trải qua biến cố gia đình. Việc tước bỏ quyền được giải trình của người lao động và ra quyết định chỉ dựa trên các con số vô tri là vi phạm nguyên tắc công bằng, nhân văn trong quản trị, đồng thời đặt công ty trước rủi ro bị kiện tụng vì vi phạm Luật Lao động.
+
+Phần 2: Sơ đồ quy trình phối hợp "Human-in-the-loop" cho MartX
+Dưới đây là luồng quy trình 3 bước chuẩn hóa để đảm bảo an toàn, công bằng và tuân thủ pháp lý khi ứng dụng AI vào đánh giá nhân sự.
+
+Bước 1: Cung cấp dữ liệu có kiểm soát (Input)
+
+Hành động: Trưởng phòng làm sạch và ẩn danh hóa dữ liệu (sử dụng mã nhân viên thay vì tên thật để tránh rủi ro lộ lọt thông tin cá nhân).
+
+Thiết lập câu lệnh: Sử dụng AI với tư cách trợ lý phân tích. Lệnh đúng phải là: "Dựa trên dữ liệu, hãy phân tích xu hướng hiệu suất và lọc ra các mã nhân viên không đạt chuẩn trong 3 tháng gần nhất để quản lý đánh giá". (Tuyệt đối không giao quyền hoặc dùng các từ khóa như "sa thải", "đuổi việc").
+
+Bước 2: AI phân tích và Đề xuất (AI Processing & Proposal)
+
+Hành động: AI xử lý dữ liệu lớn, phát hiện các điểm bất thường và lập báo cáo.
+
+Đầu ra: Một bản danh sách cảnh báo hiệu suất (Performance Warning List), đi kèm các chỉ số minh chứng rõ ràng, không mang tính phán xét hay quyết định số phận nhân sự.
+
+Bước 3: Con người thẩm định và Ký quyết định (Human-in-the-loop & Final Decision)
+
+Thẩm định bối cảnh (Contextual Review): Trưởng phòng Nhân sự lấy danh sách đề xuất từ AI, phối hợp với quản lý trực tiếp của nhân sự để xem xét hồ sơ thực tế. Tổ chức các buổi phỏng vấn (1-on-1) để lắng nghe nhân viên giải trình, xác minh các yếu tố ngoại cảnh (sức khỏe, thiết bị lỗi, quy trình phòng ban có vấn đề).
+
+Ra quyết định: Sau khi đã tổng hợp cả dữ liệu khách quan từ AI và bối cảnh thực tiễn từ con người, Trưởng phòng Nhân sự mới sử dụng năng lực chuyên môn và thẩm quyền pháp lý của mình để ra quyết định cuối cùng (đào tạo lại, thuyên chuyển, hoặc sa thải) và tự chịu trách nhiệm trước pháp luật về quyết định đó.

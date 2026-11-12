@@ -1,0 +1,42 @@
+Phần 1: Bản chất của LLM - Cách AI "đoán từ"
+AI không "hiểu" code theo cách tư duy logic của con người; chúng hoạt động dựa trên xác suất thống kê để dự đoán từ (token) tiếp theo.
+
+Cơ chế Autocomplete khổng lồ: Khi bạn nhập một câu hỏi lập trình, AI sẽ phân tích chuỗi token đầu vào, đối chiếu với dữ liệu đã được huấn luyện và tính toán xem token nào có khả năng xuất hiện tiếp theo cao nhất để ghép thành câu trả lời hợp lý.
+
+Hệ quả trong học lập trình: Vì AI chỉ ghép từ theo mẫu (pattern matching), nó có thể viết ra một đoạn code trông rất chuyên nghiệp và hoàn hảo về mặt cú pháp, nhưng lại sử dụng các hàm không hề tồn tại hoặc sai hoàn toàn về mặt logic thuật toán.
+
+Phần 2: 3 cách nhận diện "ảo giác" (Hallucination) của AI
+Ảo giác xảy ra khi AI sinh ra các thông tin hoàn toàn sai lệch hoặc bịa đặt nhưng lại trình bày với thái độ cực kỳ tự tin. Để tránh rơi vào bẫy này khi học code, hãy áp dụng 3 bộ lọc sau:
+
+Biên dịch và chạy thử ngay lập tức (Test driven): Đừng bao giờ copy-paste code của AI thẳng vào dự án thật. Hãy đưa đoạn code đó vào một môi trường cô lập (sandbox/terminal) để chạy thử. Nếu AI bịa ra một thư viện giả, trình biên dịch (Compiler) sẽ lập tức báo lỗi.
+
+Kiểm chứng chéo với tài liệu chính thức (Document cross-reference): Nếu AI đề xuất một phương thức (method) hoặc hàm mới mà bạn chưa từng học, hãy tra cứu trực tiếp tên hàm đó trên các trang tài liệu chính thức như MDN Web Docs, Microsoft Learn, hoặc C++ Reference.
+
+Yêu cầu AI giải thích từng dòng (Rubber Duck Debugging với AI): Bắt AI phải giải thích chi tiết logic của đoạn code nó vừa viết. Khi bị ép phải phân tích từng bước, AI thường tự bộc lộ sự mâu thuẫn trong logic hoặc tự động "xin lỗi và sửa lại" nếu đoạn code trước đó là sản phẩm của ảo giác.
+
+Phần 3: Ứng dụng khung CREATE để thiết kế Prompt tối ưu
+Để AI cung cấp đáp án chính xác và tránh bịa đặt thông tin, hãy cấu trúc câu lệnh của bạn theo khung CREATE. Dưới đây là ví dụ áp dụng khi bạn cần AI hỗ trợ tìm lỗi trong code C++:
+
+C - Character/Context (Bối cảnh/Vai trò):
+
+"Đóng vai một giảng viên Lập trình C++ tại trường đại học. Tôi là sinh viên năm nhất đang học môn Cơ sở dữ liệu và thuật toán."
+
+R - Request (Yêu cầu cốt lõi):
+
+"Hãy tìm lỗi trong đoạn code quản lý mảng tĩnh dưới đây và giải thích tại sao nó gây ra lỗi tràn bộ nhớ (segmentation fault)."
+
+E - Explanation (Giải thích chi tiết/Ràng buộc):
+
+"Đoạn code: [Dán code của bạn vào đây]. Hãy lưu ý tôi chỉ mới học đến vòng lặp for và mảng 1 chiều, chưa học về con trỏ (pointer)."
+
+A - Action (Hành động cụ thể):
+
+"Chỉ ra chính xác dòng code bị lỗi. Đưa ra 2 cách sửa khác nhau dựa trên kiến thức cơ bản tôi đã học."
+
+T - Tone (Giọng điệu/Định dạng):
+
+"Giải thích cặn kẽ, sư phạm, sử dụng định dạng Markdown, làm nổi bật các từ khóa quan trọng bằng chữ in đậm."
+
+E - Extras (Bổ sung):
+
+"Nếu trong code có sử dụng thư viện lạ không thuộc C++ standard library, hãy cảnh báo ngay cho tôi."
